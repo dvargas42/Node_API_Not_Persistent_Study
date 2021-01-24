@@ -1,0 +1,8 @@
+{
+  "name": "Node_API_Not_Persistent_Study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dvargas42/Node_API_Not_Persistent_Study.git",
+  "author": "dvargas42 <dvargas.eng@gmail.com>",
+  "license": "MIT"
+}
