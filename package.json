@@ -4,12 +4,13 @@
   "main": "index.js",
   "repository": "https://github.com/dvargas42/Node_API_Not_Persistent_Study.git",
   "author": "dvargas42 <dvargas.eng@gmail.com>",
-  "scripts":{
+  "scripts": {
     "dev": "nodemon src/index.js"
   },
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
