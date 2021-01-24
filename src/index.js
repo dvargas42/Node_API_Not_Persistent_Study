@@ -27,7 +27,11 @@ app.put('/projects/:id', (request, response) => {
     })
 });
 
-app.delete();
+app.delete('/projects/:id', (request, response) => {
+    const id = request.params;
+
+    return response.send();
+});
 
 app.listen(3333, () => {
     console.log('🚀 Back-end started!')
