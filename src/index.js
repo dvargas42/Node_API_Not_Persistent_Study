@@ -15,7 +15,7 @@ app.get('/projects', (request, response) => {
 
 app.post('/projects', (request, response) => {
     const { title, owner } = request.body;
-    const project = {title, owner};
+    const project = {id: uuid(), title, owner};
 
     projects.push(project);
 
@@ -24,7 +24,9 @@ app.post('/projects', (request, response) => {
 
 app.put('/projects/:id', (request, response) => {
     const { id } = request.params;
-    const { title, owner } = request.body;
+    const { title } = request.body;
+
+    projects.findIndex(project => )
 
     return response.json({
         id:id,
