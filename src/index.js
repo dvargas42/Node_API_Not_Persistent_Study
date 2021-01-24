@@ -16,7 +16,16 @@ app.post('/projects', (request, response) => {
     return response.json(body);
 });
 
-app.put();
+app.put('/projects/:id', (request, response) => {
+    const id = request.params;
+    const { title, owner } = request.body;
+
+    return response.json({
+        id:id,
+        title:title,
+        owner:owner,
+    })
+});
 
 app.delete();
 
