@@ -10,7 +10,11 @@ app.get('/projects', (request, response) => {
     return response.json({title:title, owner:owner});
 });
 
-app.post();
+app.post('/projects', (request, response) => {
+    const body = request.body;
+
+    return response.json(body);
+});
 
 app.put();
 
