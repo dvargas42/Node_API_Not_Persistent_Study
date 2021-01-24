@@ -50,7 +50,7 @@ app.delete('/projects/:id', (request, response) => {
 
     projects.splice(projectIndex);
 
-    return response.send();
+    return response.status(204).send();
 });
 
 app.listen(3333, () => {
