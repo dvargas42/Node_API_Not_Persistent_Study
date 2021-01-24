@@ -13,7 +13,7 @@ app.get('/projects', (request, response) => {
 });
 
 app.post('/projects', (request, response) => {
-    const body = request.body;
+    const { title, owner } = request.body;
 
     return response.json(body);
 });
