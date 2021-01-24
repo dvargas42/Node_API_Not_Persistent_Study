@@ -4,7 +4,11 @@ const app = express();
 
 app.use(express.json());
 
-app.get();
+app.get('/projects', (request, response) => {
+    const {title, owner } =  request.query;
+    
+    return response.json({title:title, owner:owner});
+});
 
 app.post();
 
