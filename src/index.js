@@ -24,7 +24,7 @@ app.post('/projects', (request, response) => {
 
 app.put('/projects/:id', (request, response) => {
     const { id } = request.params;
-    const { title } = request.body;
+    const { title, owner } = request.body;
 
     const projectIndex = projects.findIndex( project => project.id === id );
 
