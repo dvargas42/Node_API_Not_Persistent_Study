@@ -40,7 +40,15 @@ app.put('/projects/:id', (request, response) => {
 });
 
 app.delete('/projects/:id', (request, response) => {
-    const id = request.params;
+    const { id } = request.params;
+
+    const projectIndex = project.findIndex( project => project.id === id );
+
+    if (projectIndex < 0) {
+        return response.status(400).json({ error: 'Project not found!' });
+    }
+
+    projects.splice(projectIndex);
 
     return response.send();
 });
