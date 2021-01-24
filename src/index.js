@@ -4,6 +4,8 @@ const app = express();
 
 app.use(express.json());
 
+const projects = [];
+
 app.get('/projects', (request, response) => {
     const {title, owner } =  request.query;
     
