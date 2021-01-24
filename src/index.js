@@ -8,9 +8,9 @@ app.use(express.json());
 const projects = [];
 
 app.get('/projects', (request, response) => {
-    const { title, owner } =  request.query;
+    /**const { title, owner } =  request.query;*/
     
-    return response.json({title:title, owner:owner});
+    return response.json(projects);
 });
 
 app.post('/projects', (request, response) => {
