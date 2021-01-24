@@ -17,7 +17,7 @@ app.post('/projects', (request, response) => {
 });
 
 app.put('/projects/:id', (request, response) => {
-    const id = request.params;
+    const { id } = request.params;
     const { title, owner } = request.body;
 
     return response.json({
