@@ -1,5 +1,5 @@
 const express = require('express');
-const { uuid } = require('uuidv4');
+const { uuid, isUuid } = require('uuidv4');
 
 const app = express();
 
@@ -17,6 +17,14 @@ function logRequest(request, response, next){
     next();
 
     console.timeEnd(logLabel);
+}
+function validateProjectId(request, response, next) {
+    const { id } = request.params;
+
+    if(!isUuid(id)){
+        return response.status(40).json({ error: 'Invalid project ID.'})
+    }
+    return next();
 }
 
 app.use(logRequest);
