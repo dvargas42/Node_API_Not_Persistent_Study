@@ -7,8 +7,8 @@ app.use(express.json());
 
 const projects = [];
 
-function logRequest(request, response, next){
-    const { method, url } =  request;
+function logRequest(request, response, next) {
+    const { method, url } = request;
 
     const logLabel = `[${method.toUpperCase()}] ${url}`;
 
@@ -18,17 +18,18 @@ function logRequest(request, response, next){
 
     console.timeEnd(logLabel);
 }
+
 function validateProjectId(request, response, next) {
     const { id } = request.params;
 
-    if(!isUuid(id)){
-        return response.status(400).json({ error: 'Invalid project ID.'})
+    if (!isUuid(id)) {
+        return response.status(400).json({ error: 'Invalid project ID.' })
     }
     return next();
 }
 
 app.use(logRequest);
-app.use('/projects/:id',validateProjectId);
+app.use('/projects/:id', validateProjectId);
 
 app.get('/projects', (request, response) => {
     const { title } = request.query;
