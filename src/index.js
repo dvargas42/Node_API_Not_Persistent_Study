@@ -12,9 +12,11 @@ function logRequest(request, response, next){
 
     const logLabel = `[${method.toUpperCase()}] ${url}`;
 
-    console.log(logLabel);
+    console.time(logLabel);
 
-    return next();
+    next();
+
+    console.timeEnd(logLabel);
 }
 
 app.use(logRequest);
