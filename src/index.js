@@ -1,5 +1,5 @@
 const express = require('express');
-const { v4 } = require('uuidv4');
+const { uuid } = require('uuidv4');
 
 const app = express();
 
