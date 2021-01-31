@@ -24,7 +24,7 @@ app.get('/projects', (request, response) => {
 
 app.post('/projects', (request, response) => {
     const { title, owner } = request.body;
-    const project = { id: v4(), title, owner };
+    const project = { id: uuid(), title, owner };
 
     projects.push(project);
 
