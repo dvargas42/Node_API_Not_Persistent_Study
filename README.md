@@ -12,7 +12,7 @@ This project was developed with the following technologies:
 - [VS Code](https://code.visualstudio.com/)
 
 ## :information_source: How to install
-To clone this application you will need the [Git](https://git-scm.com) and [Yarn](https://yarnpkg.com/getting-started/install)installed on your computer.
+To clone this application you will need the [Git](https://git-scm.com) and [Yarn](https://yarnpkg.com/getting-started/install) installed on your computer.
 
 ```bash
 # Clone repository
@@ -23,7 +23,7 @@ $ yarn
 
 # Run the application
 $ yarn dev
-
+```
 
 ## :memo: License
 This project is under the MIT license. See the [LICENSE](https://github.com/lukemorales/react-native-design-code/blob/master/LICENSE) for more information.
